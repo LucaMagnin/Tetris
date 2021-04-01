@@ -1,5 +1,5 @@
 import java.util.*;
-
+//Controle grille
 public class ControleGrille  {
 	private final int NBCASESLARGEUR;
 	private final int NBCASESLONGUEUR;
