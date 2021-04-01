@@ -1,5 +1,5 @@
 import java.util.*;
-
+//Controle grille
 public class ControleGrille  {
 	private final int NBCASESLARGEUR;
 	private final int NBCASESLONGUEUR;
@@ -66,7 +66,7 @@ public class ControleGrille  {
         return t;
 	}
 	
-		public boolean ObjetDroite(){
+	public boolean ObjetDroite(){
 		int i=0;
 		boolean t = false;
 		while(!t && i<tetraminoActuel.coordsTetrimino.length){
@@ -82,7 +82,7 @@ public class ControleGrille  {
 		}
         return t;
 	}
-		public boolean ObjetGauche(){
+	public boolean ObjetGauche(){
 		int i=0;
 		boolean t = false;
 		while(!t && i<tetraminoActuel.coordsTetrimino.length){
