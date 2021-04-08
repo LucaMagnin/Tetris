@@ -6,8 +6,8 @@ public class Tetraminos {
 	
 	public Point[] coordsTetrimino;
 	public Color couleurTetra;
-	public int[][] origineTetramino;
-	public Tetraminos(Point[] coords,Color couleur,int[][] origine){
+	public Point origineTetramino;
+	public Tetraminos(Point[] coords,Color couleur,Point origine){
 		coordsTetrimino=coords;
 		couleurTetra=couleur;
 		origineTetramino=origine;
