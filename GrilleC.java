@@ -22,7 +22,7 @@ public class GrilleC extends JPanel { //la grille est un panneau
 	public void paint(Graphics g){  
 		for(int x =120; x <= 300; x += 30 ){
 			for(int y = 100; y <= 500; y += 30 ){ 
-			g.drawRect(x,y,30,30);
+			g.drawRect(x,y,30,30); //ceci est un test
 			}
 		}
 
