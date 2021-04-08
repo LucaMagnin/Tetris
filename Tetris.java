@@ -1,10 +1,6 @@
-
-public class Tetris {
-	
-	public static void main (String[] args) {
-		
+public class Tetris{
+	public static void main (String[] args)  {
+		new Interfacedepart ();
 	}
 }
 
-//Bonsoir, je suis la main
-//coucou
