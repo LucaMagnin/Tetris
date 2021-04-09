@@ -145,7 +145,7 @@ public class FenetreTetris extends JFrame {
         
        GrilleC PanneaumaGrille = new GrilleC();
        PanneaumaGrille.setLayout(null);
-       PanneaumaGrille.setBounds(115,-75,2000,2000);
+       PanneaumaGrille.setBounds(365,-70,2000,2000);
         
         //Component p =this.getContentPane().add(new GrilleC()); //récupère grille mais comment faire pour que ça s'affiche ?
         //panneauGeneral.add(p); 
