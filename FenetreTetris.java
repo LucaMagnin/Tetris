@@ -133,9 +133,7 @@ public class FenetreTetris extends JFrame {
         panneauGeneral.add(Conteneur2);
         panneauGeneral.add(Conteneur3);
         panneauGeneral.add(Conteneur4); 
-       
-        this.setVisible(true);
-        
+             
         
         //panneau fond
 	JLabel Fond1 = new JLabel(new ImageIcon("./Tetris-blockst.png"));
@@ -144,11 +142,16 @@ public class FenetreTetris extends JFrame {
 	panneauGeneral.add(Fond1);	
 	
 	//ajout panneau Grille
-        this.getContentPane().add(new GrilleC());
-        JPanel PanneaumaGrille = new JPanel();
-        PanneaumaGrille.setLayout(null);
-        PanneaumaGrille.setBounds(100,160,60,30);
-        this.add(PanneaumaGrille);
+        
+       GrilleC PanneaumaGrille = new GrilleC();
+       PanneaumaGrille.setLayout(null);
+       PanneaumaGrille.setBounds(90,50,2000,2000);
+        
+        //Component p =this.getContentPane().add(new GrilleC()); //récupère grille mais comment faire pour que ça s'affiche ?
+        //panneauGeneral.add(p); 
+         //this.add(p);
+        panneauGeneral.add(PanneaumaGrille);
+        this.setVisible(true);
         
         
         }}
