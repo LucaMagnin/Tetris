@@ -24,10 +24,10 @@ public class GrilleC extends JPanel { //la grille est un panneau
 		JPanel PanneaumaGrille = this;
 	}
  
-	public void paint(Graphics g){  
-		for(int x =120; x <= 300; x += 30 ){
-			for(int y = 100; y <= 500; y += 30 ){ 
-			g.drawRect(x,y,30,30);
+	public void paint(Graphics g){ 
+		for(int x =320; x <= 700; x += 40 ){
+			for(int y = 100; y <= 680; y += 40 ){ 
+			g.drawRect(x,y,40,40);
 			}
 		}
 
