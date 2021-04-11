@@ -152,9 +152,10 @@ public class FenetreTetris extends JFrame {
          //this.add(p);
         panneauGeneral.add(PanneaumaGrille);
         this.setVisible(true);
+	}
+
+}
         
-        
-        }}
         
         /*JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(10, // nb de cases dans une ligne

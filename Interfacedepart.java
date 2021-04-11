@@ -131,13 +131,38 @@ public class Interfacedepart extends JFrame{
 		
 	// Pour rendre la fenÃªtre visible
 	this.setVisible(true);
-	
+
 	
 	}
 	
 	public void fermeFen(){
 		dispose();
 	}
+	public class EcouteurStart implements ActionListener{
+		private Interfacedepart dep;
 	
+		public EcouteurStart(Interfacedepart dep){
+			this.dep=dep;
+		}
+	
+		public void actionPerformed(ActionEvent e)  {
+
+			FenetreTetris f =new FenetreTetris(dep);
+			dep.fermeFen();
+ 
+		} 
+	}	
+	public class EcouteurQuitter implements ActionListener{
+		private Interfacedepart dep;
+	
+		public EcouteurQuitter(Interfacedepart dep){
+			this.dep=dep;
+		}
+	
+		public void actionPerformed(ActionEvent e)  {
+			dep.fermeFen();
+ 
+		} 
+	}
 
 }

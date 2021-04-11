@@ -18,11 +18,7 @@ public class Tetraminos {
 		coordsTetrimino=coords;
 		couleurTetra=couleur;
 	}
-	/*public int[][] TetraminoAleatoire(){
-		int a=(int)(Math.random()*7);
-		int[][] TetraminoAleatoire = coordsTetrimino[a];
-		return TetraminoAleatoire;
-	}*/
+
 	
 }
 		
