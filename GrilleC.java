@@ -10,8 +10,9 @@ import java.awt.Font;
 import java.awt.event.*;
 import java.util.*;
 
-public class GrilleC extends JPanel { //la grille est un panneau
+public class GrilleC extends JPanel implements KeyListener{ //la grille est un panneau
 	ControleGrille monControleGrille=new ControleGrille();
+	
 
 	/*public static void main(String args[]) {
 		
@@ -59,11 +60,45 @@ public class GrilleC extends JPanel { //la grille est un panneau
 		Timer chrono = new Timer();
 		chrono.schedule(new TimerTask(){
 			public void run(){
+				if(monControleGrille.perdu){
+					chrono.cancel();
+				}
 				monControleGrille.Descendre();
 				repaint();
 			}
-		},1000,1000);
+		},200,200);
 	}
+	
+
+	
+		public void keyPressed(KeyEvent e) {
+				switch (e.getKeyCode()) {
+					case KeyEvent.VK_UP:
+				
+						break;
+					case KeyEvent.VK_DOWN:
+					
+						break;
+					case KeyEvent.VK_LEFT:
+						monControleGrille.DeplacementAGauche();
+						break;
+					case KeyEvent.VK_RIGHT:
+						monControleGrille.DeplacementADroite();
+						break;
+					case KeyEvent.VK_SPACE:
+						monControleGrille.RotationDroite();
+
+						break;
+					} 
+				}
+		public void keyReleased(KeyEvent e) {
+			
+		}
+		public void keyTyped(KeyEvent e) {
+			
+		}
+
+
 	
 		
 }

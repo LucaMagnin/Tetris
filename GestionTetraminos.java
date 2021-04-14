@@ -14,7 +14,7 @@ public class GestionTetraminos {
 		Tetraminos L = new Tetraminos(new Point[]{new Point(-1, -1), new Point(0, -1), new Point(0, 0), new Point(0, 1)},Color.orange);
 		Tetraminos J = new Tetraminos(new Point[]{new Point(1, -1), new Point(0, -1), new Point(0, 0), new Point(0, 1)},Color.blue);
 		
-		tabTetraminos = new Tetraminos[] {Z,S,I,T,O,L,J};	
+		tabTetraminos = new Tetraminos[] {Z,S,T,O,L,J,I};	
 	}
 	public Tetraminos TetraminoAleatoire(){
 		return tabTetraminos[(int)(Math.random()*7)];
