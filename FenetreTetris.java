@@ -32,29 +32,14 @@ public class FenetreTetris extends JFrame {
 	private JLabel linestoclear;
 	public Interfacedepart interfaceDep;
 
-		/*public void keyPressed(KeyEvent e)
-		{	
-			Point p = button.getLocation();
-			switch (e.getKeyCode())
-			{
-				case KeyEvent.VK_RIGHT:
-					button.setLocation(p.x+1, p.y);
-					break;
-				case KeyEvent.VK_DOWN:
-					button.setLocation(p.x, p.y+1);
-					break;
-			}
-		}
 
-		public void keyReleased(KeyEvent e) {}
-		public void keyTyped(KeyEvent e) {} */
 		
 
 	
 	public FenetreTetris (Interfacedepart i){   //    LinkedList<Tetraminos> maListeCourbe quand j'aurai la liste de tetraminos 
 		
         super(); 
-        
+        this.addKeyListener(new controleClavier());
         interfaceDep= i;
         
 		// la fenÃƒÂªtre existe dÃƒÂ©jÃƒ  (crÃƒÂ©ÃƒÂ©e dans GestionCourbe) : on la paramÃƒÂ¨tre
@@ -146,10 +131,6 @@ public class FenetreTetris extends JFrame {
        GrilleC PanneaumaGrille = new GrilleC();
        PanneaumaGrille.setLayout(null);
        PanneaumaGrille.setBounds(365,-70,2000,2000);
-        
-        //Component p =this.getContentPane().add(new GrilleC()); //récupère grille mais comment faire pour que ça s'affiche ?
-        //panneauGeneral.add(p); 
-         //this.add(p);
         panneauGeneral.add(PanneaumaGrille);
         this.setVisible(true);
 	}
@@ -157,35 +138,9 @@ public class FenetreTetris extends JFrame {
 }
         
         
-        /*JPanel panel = new JPanel();
-		panel.setLayout(new GridLayout(10, // nb de cases dans une ligne
-      20, // nb de cases dans une colonne
-      1, // Ã©paisseur des traits horizontaux
-      1)); // Ã©paisseur des traits verticaux
-		panel.setBackground(Color.BLACK); // Couleur des traits
-        
-        panneauGeneral.add(panel);*/
-        
-        
-        
-        
-       
-	
-	/*public grille {
-		final int H = 20; // hauteur (en nombre de cellules )
-		final int L = 10; // largeur
-		boolean [][] grille = genererMondeAleatoire (H,L ,0.7) ;
-		affichergrille ( grille ) ;
-	}
 
-	public static void afficherMonde ( boolean [][] monde ) {
-	     // a faire voir code LUCA du jeu de la vie 
-	}
-	
-	
-	public static boolean [][] gererTetraminos (int hauteur , int largeur, double p) {
-	// a faire pour 
-	} */
+        
+
 	
 	
 	
