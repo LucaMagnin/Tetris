@@ -31,6 +31,7 @@ public class FenetreTetris extends JFrame {
     private JLabel score;
 	private JLabel linestoclear;
 	public Interfacedepart interfaceDep;
+	public GrilleC PanneaumaGrille;
 
 
 		
@@ -128,11 +129,56 @@ public class FenetreTetris extends JFrame {
 	
 	//ajout panneau Grille
         
-       GrilleC PanneaumaGrille = new GrilleC();
+       PanneaumaGrille = new GrilleC();
        PanneaumaGrille.setLayout(null);
        PanneaumaGrille.setBounds(365,-70,2000,2000);
-        panneauGeneral.add(PanneaumaGrille);
-        this.setVisible(true);
+       panneauGeneral.add(PanneaumaGrille);
+       this.setVisible(true);
+	}
+	public class controleClavier implements KeyListener{
+	
+
+
+
+		public void keyPressed(KeyEvent e) {
+		
+		
+				switch (e.getKeyCode()) {
+					case KeyEvent.VK_UP:
+				
+						break;
+					case KeyEvent.VK_DOWN:
+						PanneaumaGrille.monControleGrille.Descendre();
+					
+						break;
+					case KeyEvent.VK_LEFT:
+					
+						PanneaumaGrille.monControleGrille.DeplacementAGauche();
+						System.out.println("Gauche");
+
+						break;
+					case KeyEvent.VK_RIGHT:
+						PanneaumaGrille.monControleGrille.DeplacementADroite();
+						PanneaumaGrille.repaint();
+						System.out.println("Droite");
+
+						break;
+					case KeyEvent.VK_SPACE:
+						System.out.println("Rotation");
+						PanneaumaGrille.monControleGrille.RotationDroite();
+					
+						break;
+					} 
+				}
+			public void keyReleased(KeyEvent e) {
+			
+			}
+			public void keyTyped(KeyEvent e) {
+			
+			}
+
+
+
 	}
 
 }

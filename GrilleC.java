@@ -22,7 +22,7 @@ public class GrilleC extends JPanel { //la grille est un panneau
 
 	}
  
-	public void paintComponent(Graphics g){ 
+	public void paint(Graphics g){ 
 		int i=0;
 
 		for(int x =100; x <= 420; x += 28 ){
@@ -55,13 +55,18 @@ public class GrilleC extends JPanel { //la grille est un panneau
 			public void run(){
 				if(monControleGrille.perdu){
 					chrono.cancel();
-				} 
-				monControleGrille.Descendre();
-				repaint();
+					new gameOver();
+				} else{
+					monControleGrille.Descendre();
+					repaint();
+				}
 			}
-		},500,500);
+		},300,300);
 	}
-	
+	public void Gauche(){
+		monControleGrille.DeplacementAGauche();
+		repaint();
+	}
 		
 	
 
