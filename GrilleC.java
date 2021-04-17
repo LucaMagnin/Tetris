@@ -59,21 +59,11 @@ public class GrilleC extends JPanel { //la grille est un panneau
 				} else{
 					monControleGrille.Descendre();
 					repaint();
+					
 				}
 			}
-		},300,300);
+		},600,600);
 	}
-	public void Gauche(){
-		monControleGrille.DeplacementAGauche();
-		repaint();
-	}
-		
-	
-
-	
-
-
-	
-		
+			
 }
  

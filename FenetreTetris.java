@@ -154,17 +154,13 @@ public class FenetreTetris extends JFrame {
 					case KeyEvent.VK_LEFT:
 					
 						PanneaumaGrille.monControleGrille.DeplacementAGauche();
-						System.out.println("Gauche");
 
 						break;
 					case KeyEvent.VK_RIGHT:
 						PanneaumaGrille.monControleGrille.DeplacementADroite();
-						PanneaumaGrille.repaint();
-						System.out.println("Droite");
 
 						break;
 					case KeyEvent.VK_SPACE:
-						System.out.println("Rotation");
 						PanneaumaGrille.monControleGrille.RotationDroite();
 					
 						break;
