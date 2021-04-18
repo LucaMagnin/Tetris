@@ -65,53 +65,53 @@ public class FenetreTetris extends JFrame {
 		 // Conteneur 1 contient un JLabel consigne
         JLabel tetraminosnext1 = new JLabel();
         tetraminosnext1.setText("HOLD");
-        tetraminosnext1.setBounds(30,0,60,20); // x,y
+        tetraminosnext1.setBounds(50,0,100,40); // x,y
         tetraminosnext1.setForeground(Color.white);
         tetraminosnext1.setFont(new java.awt.Font(Font.SERIF,Font.BOLD,17));
         
         // Conteneur 2 contient un JLabel consigne
         JLabel tetraminosnext2 = new JLabel();
         tetraminosnext2.setText("NEXT");
-        tetraminosnext2.setBounds(30,0,60,20);
+        tetraminosnext2.setBounds(50,0,100,40);
         tetraminosnext2.setForeground(Color.white);
         tetraminosnext2.setFont(new java.awt.Font(Font.SERIF,Font.BOLD,17));
         
         // Conteneur 3 contient un JLabel consigne
         JLabel level = new JLabel();
         level.setText("LEVEL");
-        level.setBounds(30,0,60,20);
+        level.setBounds(50,0,100,40);
         level.setForeground(Color.white);
         level.setFont(new java.awt.Font(Font.SERIF,Font.BOLD,17));
         
         // Conteneur 4 contient un JTextFiled saisie
         JLabel score = new JLabel();
         score.setText("SCORE");
-        score.setBounds(35,0,60,14);
+        score.setBounds(50,0,100,40);
         score.setForeground(Color.white);
-        score.setFont(new java.awt.Font(Font.SERIF,Font.BOLD,13));
+        score.setFont(new java.awt.Font(Font.SERIF,Font.BOLD,17));
 		
 		
 		JPanel Conteneur1 = new JPanel() ;
         Conteneur1.setLayout(null);
-        Conteneur1.setBounds(250,25,120,80);
+        Conteneur1.setBounds(250,25,160,150);
         Conteneur1.setBackground(new Color(21,47,128));
         Conteneur1.add(tetraminosnext1);
 		
 		JPanel Conteneur2 = new JPanel() ;
         Conteneur2.setLayout(null);
-        Conteneur2.setBounds(900,25,120,80);
+        Conteneur2.setBounds(900,25,160,150);
         Conteneur2.setBackground(new Color(21,47,128));
         Conteneur2.add(tetraminosnext2);
         
         JPanel Conteneur3 = new JPanel() ;
         Conteneur3.setLayout(null);
-        Conteneur3.setBounds(250,520,120,100);
+        Conteneur3.setBounds(250,520,160,150);
         Conteneur3.setBackground(new Color(32,74,200));
         Conteneur3.add(level);
 		
 		JPanel Conteneur4 = new JPanel() ;
         Conteneur4.setLayout(null);
-        Conteneur4.setBounds(900,530,120,60);
+        Conteneur4.setBounds(900,520,160,150);
         Conteneur4.setBackground(new Color(32,74,200));
         Conteneur4.add(score);
         
@@ -131,7 +131,7 @@ public class FenetreTetris extends JFrame {
         
        PanneaumaGrille = new GrilleC();
        PanneaumaGrille.setLayout(null);
-       PanneaumaGrille.setBounds(365,-70,2000,2000);
+       PanneaumaGrille.setBounds(0,0,1285,675);
        panneauGeneral.add(PanneaumaGrille);
        this.setVisible(true);
 	}
@@ -161,7 +161,7 @@ public class FenetreTetris extends JFrame {
 
 						break;
 					case KeyEvent.VK_SPACE:
-						PanneaumaGrille.monControleGrille.RotationDroite();
+						PanneaumaGrille.monControleGrille.Rotation();
 					
 						break;
 					} 
