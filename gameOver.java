@@ -6,6 +6,8 @@ public class gameOver extends JFrame{
 		setTitle("Game Over"); 
         setSize(500,500);	
         setLocation(100,200);
+	// Pour placer la fenÃªtre au centre de l'Ã©cran
+		this.setLocationRelativeTo(null);
         
         JLabel perdu = new JLabel("GAME OVER");
         perdu.setBounds(180,70,300,100);
