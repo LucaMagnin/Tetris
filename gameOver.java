@@ -1,33 +1,1 @@
-import javax.swing.*;
-import java.awt.*;
-public class gameOver extends JFrame{
-	
-	public gameOver(){
-		setTitle("Game Over"); 
-        setSize(500,500);	
-        setLocation(100,200);
-	// Pour placer la fenÃªtre au centre de l'Ã©cran
-		this.setLocationRelativeTo(null);
-        
-        JLabel perdu = new JLabel("GAME OVER");
-        perdu.setBounds(180,70,300,100);
-        perdu.setForeground(Color.blue);
-        //panneau fond
-		JLabel Fond = new JLabel(new ImageIcon("./Rf838b0264611378bc84338f70571ed1c.png"));
-		Fond.setBounds(0,0,this.getWidth(),this.getHeight());
-        
-        perdu.setFont(new java.awt.Font(Font.SERIF,Font.BOLD,40));
-        
-        JPanel panneauFinal = new JPanel(); 
-		panneauFinal.setLayout(null);
-		panneauFinal.add(perdu); 
-		panneauFinal.setBounds(100,200,500,500);
-		
-		panneauFinal.add(Fond);
-		add(panneauFinal);
-		setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-	}
-}
-
+import javax.swing.JLabel;import javax.swing.JTextField;import java.awt.Color;import javax.swing.*;import java.awt.*;import java.awt.Graphics;import java.awt.BorderLayout;import javax.swing.ImageIcon;import javax.swing.JFrame;import java.awt.Font;import java.awt.event.*;import java.awt.event.ActionListener;public class gameOver extends JFrame{		public JButton rejouer;	public JButton Menu;	public JButton Quitter;		public gameOver(){		setTitle("Game Over");         setSize(500,500);	        setLocation(100,200);		// Pour placer la fenÃªtre au centre de l'Ã©cran		this.setLocationRelativeTo(null);                JLabel perdu = new JLabel("GAME OVER");        perdu.setBounds(180,70,300,100);        perdu.setForeground(Color.blue);              /*  JButton rejouer = new JButton("Rejouer");		rejouer.setBounds(120,280,150,50);		rejouer.addActionListener(new EcouteurRejouer(this));				JButton Menu = new JButton("Menu Principal");		Menu.setBounds(120,280,150,50);		Menu.addActionListener(new EcouteurMenu(this));				JButton Quitter = new JButton("Quitter");		Quitter.setBounds(120,280,150,50);		Quitter.addActionListener(new EcouteurQuitter(this));		*/		        //panneau fond		JLabel Fond = new JLabel(new ImageIcon("./Rf838b0264611378bc84338f70571ed1c.png"));		Fond.setBounds(0,0,this.getWidth(),this.getHeight());                perdu.setFont(new java.awt.Font(Font.SERIF,Font.BOLD,40));                JPanel panneauFinal = new JPanel(); 		panneauFinal.setLayout(null);		panneauFinal.add(perdu);		panneauFinal.add(rejouer);		panneauFinal.add(Menu);		panneauFinal.add(Quitter); 		panneauFinal.setBounds(100,200,500,500);				panneauFinal.add(Fond);		add(panneauFinal);		setVisible(true);        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);			}		/*public class EcouteurRejouer implements ActionListener{		private Interfacedepart dep;			public EcouteurRejouer(Interfacedepart dep){			this.dep=dep;		}			public void actionPerformed(ActionEvent e)  {			FenetreTetris f =new FenetreTetris(dep);			dep.fermeFen(); 		} 	}		public class EcouteurQuitter implements ActionListener{		panneauFinal.setVisible(false);	}		public class EcouteurMenu implements ActionListener{		new Interfacedepart();	}	*/	}
