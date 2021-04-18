@@ -39,33 +39,58 @@ public class GrilleC extends JPanel { //la grille est un panneau
 		DessinerTetraActuel(g);
 		DessinerTetraHold(g);
 		DessinerTetraSuivant(g);
+		AfficherScore(g);
+		AfficherNiveau(g);
 	} 
 	
 	public void DessinerTetraActuel(Graphics g){
 		for(int i=0;i<4;i++){
-			g.setColor(monControleGrille.tetraminoActuel.couleurTetra);
+			
 			int origineX=500+(monControleGrille.tetraminoActuel.origineTetramino.x+monControleGrille.tetraminoActuel.coordsTetrimino[i].x)*28+1;
 			int origineY=25+(monControleGrille.tetraminoActuel.origineTetramino.y+monControleGrille.tetraminoActuel.coordsTetrimino[i].y)*28+1;
+			g.setColor(monControleGrille.tetraminoActuel.couleurTetra);
 			g.fillRect(origineX,origineY,26,26);
 		}
 	}
 	
 	public void DessinerTetraHold(Graphics g){
+		g.setColor(new Color(32,74,200));
+		g.fillRect(275,65,140,130);
 		for(int i=0;i<4;i++){
+			int origineX=325+monControleGrille.tetraminoHold.coordsTetrimino[i].x*25+1;
+			int origineY=115+(monControleGrille.tetraminoHold.coordsTetrimino[i].y)*25+1;
 			g.setColor(monControleGrille.tetraminoHold.couleurTetra);
-			int origineX=300+monControleGrille.tetraminoHold.coordsTetrimino[i].x*25+1;
-			int origineY=100+(monControleGrille.tetraminoHold.coordsTetrimino[i].y)*25+1;
 			g.fillRect(origineX,origineY,25,25);
 		}
 	}
 	
 	public void DessinerTetraSuivant(Graphics g){
+		g.setColor(new Color(32,74,200));
+		g.fillRect(925,65,140,130);
 		for(int i=0;i<4;i++){
 			g.setColor(monControleGrille.tetraminoSuivant.couleurTetra);
-			int origineX=950+monControleGrille.tetraminoSuivant.coordsTetrimino[i].x*25+1;
-			int origineY=100+(monControleGrille.tetraminoSuivant.coordsTetrimino[i].y)*25+1;
+			int origineX=975+monControleGrille.tetraminoSuivant.coordsTetrimino[i].x*25+1;
+			int origineY=115+(monControleGrille.tetraminoSuivant.coordsTetrimino[i].y)*25+1;
 			g.fillRect(origineX,origineY,25,25);
 		}
+	}
+	
+	public void AfficherScore(Graphics g){
+		g.setColor(new Color(32,74,200));
+		g.fillRect(950,550,70,50);
+		Font fonte = new Font("TimesRoman ",Font.BOLD,30);
+		g.setFont(fonte);
+		g.setColor(Color.white);
+		g.drawString(Integer.toString(monControleGrille.score),950,600);
+	}
+	
+	public void AfficherNiveau(Graphics g){
+		g.setColor(new Color(32,74,200));
+		g.fillRect(250,550,100,70);
+		Font fonte = new Font("TimesRoman ",Font.BOLD,40);
+		g.setFont(fonte);
+		g.setColor(Color.white);
+		g.drawString(Integer.toString(monControleGrille.niveau),300,600);
 	}
 	
 	public void initialiserTimer(){

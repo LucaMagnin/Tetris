@@ -93,25 +93,25 @@ public class FenetreTetris extends JFrame {
 		
 		JPanel Conteneur1 = new JPanel() ;
         Conteneur1.setLayout(null);
-        Conteneur1.setBounds(250,25,160,150);
-        Conteneur1.setBackground(new Color(21,47,128));
+        Conteneur1.setBounds(250,25,170,170);
+        Conteneur1.setBackground(new Color(32,74,200));
         Conteneur1.add(tetraminosnext1);
 		
 		JPanel Conteneur2 = new JPanel() ;
         Conteneur2.setLayout(null);
-        Conteneur2.setBounds(900,25,160,150);
-        Conteneur2.setBackground(new Color(21,47,128));
+        Conteneur2.setBounds(900,25,170,170);
+        Conteneur2.setBackground(new Color(32,74,200));
         Conteneur2.add(tetraminosnext2);
         
         JPanel Conteneur3 = new JPanel() ;
         Conteneur3.setLayout(null);
-        Conteneur3.setBounds(250,520,160,150);
+        Conteneur3.setBounds(250,520,170,150);
         Conteneur3.setBackground(new Color(32,74,200));
         Conteneur3.add(level);
 		
 		JPanel Conteneur4 = new JPanel() ;
         Conteneur4.setLayout(null);
-        Conteneur4.setBounds(900,520,160,150);
+        Conteneur4.setBounds(900,520,170,150);
         Conteneur4.setBackground(new Color(32,74,200));
         Conteneur4.add(score);
         
