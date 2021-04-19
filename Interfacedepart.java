@@ -7,10 +7,13 @@ import java.awt.Graphics;
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import java.awt.Font;
 import java.awt.event.*;
 import java.awt.event.ActionListener;
-
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
+import java.io.File;
+import java.io.IOException;
 
 
 public class Interfacedepart extends JFrame{
@@ -21,13 +24,13 @@ public class Interfacedepart extends JFrame{
 	private JButton Start;
 	private JButton Quitter;
 	public FenetreTetris f;
-
+	private Font policeTetris;
 	
 	public Interfacedepart(){
 		
 		super();
 		this.setTitle("Jeu Tetris");
-		this.setSize(600,500);
+		this.setSize(600,480);
 		// Pour placer la fenÃªtre au centre de l'Ã©cran
 		this.setLocationRelativeTo(null);
 		//Pour empÃªcher le redimensionnement de la fenÃªtre
@@ -77,12 +80,10 @@ public class Interfacedepart extends JFrame{
 		affNom.setText("Entrez votre nom");
 		affNom.setBounds(120,390,340,50);
 		affNom.setForeground(Color.white);
-	//panneauNom.add(affNom);
-	panneauGeneral.add(affNom);
+		panneauGeneral.add(affNom);
 		
 		JTextField textNom = new JTextField();
 		textNom.setBounds(300,400,200,30);
-		//panneauNom.add(textNom);
 		panneauGeneral.add(textNom);
 
 	//panneau Logo
@@ -92,18 +93,27 @@ public class Interfacedepart extends JFrame{
 	panneauGeneral.add(panneauLogo);
 	
 	JLabel Titrejeu = new JLabel();
-	Font policetitre = new Font(" Arial ",Font.BOLD,60);
-		Titrejeu.setFont(policetitre);	
+	
+	try{
+            // load a custom font in your project folder
+            
+			policeTetris = Font.createFont(Font.TRUETYPE_FONT, new File("Tetris.ttf")).deriveFont(60f);	
+			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+			ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("Tetris.ttf")));			
+		}
+		catch(IOException | FontFormatException e){
+			
+		}
+		Titrejeu.setFont(policeTetris);	
 		Titrejeu.setText("Tetris 2021");
-		Titrejeu.setBounds(130,40,340,50);
+		Titrejeu.setBounds(120,40,400,50);
 		Titrejeu.setForeground(Color.white);
-	//panneauNom.add(affNom);
 	panneauGeneral.add(Titrejeu);
 	
 	
 	//logo du jeu
 	JLabel LogoTetris = new JLabel(new ImageIcon("./logo_tetris1.png"));
-	LogoTetris.setBounds(220,105,150,150);
+	LogoTetris.setBounds(220,90,150,150);
 	panneauGeneral.add(LogoTetris);
 			
 	//panneau fond
