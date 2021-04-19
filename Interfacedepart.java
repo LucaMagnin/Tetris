@@ -20,6 +20,7 @@ public class Interfacedepart extends JFrame{
 	private JTextField textNom;
 	private JButton Start;
 	private JButton Quitter;
+	public FenetreTetris f;
 
 	
 	public Interfacedepart(){
@@ -64,12 +65,6 @@ public class Interfacedepart extends JFrame{
 	//panneauGeneral.add(panneauBoutons);
 	Quitter.addActionListener(new EcouteurQuitter(this));
 	
-
-	//this.add(panneauBoutons,BorderLayout.CENTER);
-	//this.add(Quitter,BorderLayout.CENTER);
-	//Start.setLayout(new FlowLayout(300,100,50));
-	//Quitter.setLayout(new FlowLayout(300,100,50));
-	
 	
 	//panneau qui demande le nom
 	
@@ -89,13 +84,7 @@ public class Interfacedepart extends JFrame{
 		textNom.setBounds(300,400,200,30);
 		//panneauNom.add(textNom);
 		panneauGeneral.add(textNom);
-	//panneauGeneral.add(panneauNom);
 
-	
-	//panneauNom.setLayout(new FlowLayout((FlowLayout.CENTER)));
-	
-	//this.add(panneauNom,BorderLayout.PAGE_START);
-	
 	//panneau Logo
 	JPanel panneauLogo = new JPanel();
 	panneauLogo.setBackground(Color.green);
@@ -116,10 +105,6 @@ public class Interfacedepart extends JFrame{
 	JLabel LogoTetris = new JLabel(new ImageIcon("./logo_tetris1.png"));
 	LogoTetris.setBounds(220,105,150,150);
 	panneauGeneral.add(LogoTetris);
-	
-	
-	
-	//this.add(panneauLogo,BorderLayout.PAGE_START); 
 			
 	//panneau fond
 	JLabel Fond = new JLabel(new ImageIcon("./fond_jeu.png"));
@@ -146,8 +131,7 @@ public class Interfacedepart extends JFrame{
 		}
 	
 		public void actionPerformed(ActionEvent e)  {
-
-			FenetreTetris f =new FenetreTetris(dep);
+			f =new FenetreTetris();
 			dep.fermeFen();
  
 		} 

@@ -1,6 +1,6 @@
 public class Tetris{
 	public static void main (String[] args)  {
-		new Interfacedepart ();
+		Interfacedepart i=new Interfacedepart ();
 		
 	}
 }
