@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.TimerTask;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -37,11 +38,11 @@ public class FenetreTetris extends JFrame {
 		
 
 	
-	public FenetreTetris (Interfacedepart i){   //    LinkedList<Tetraminos> maListeCourbe quand j'aurai la liste de tetraminos 
+	public FenetreTetris (){   //    LinkedList<Tetraminos> maListeCourbe quand j'aurai la liste de tetraminos 
 		
         super(); 
         this.addKeyListener(new controleClavier());
-        interfaceDep= i;
+  
         
 		// la fenÃƒÂªtre existe dÃƒÂ©jÃƒ  (crÃƒÂ©ÃƒÂ©e dans GestionCourbe) : on la paramÃƒÂ¨tre
         setTitle("TETRIS GAME ");
@@ -52,7 +53,6 @@ public class FenetreTetris extends JFrame {
 		this.setResizable(false);
 		// Pour permettre la fermeture de la fenÃƒÆ’Ã‚Âªtre lors de l'appui sur la croix rouge
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 		
 		// mon panneau global
 	
@@ -134,12 +134,11 @@ public class FenetreTetris extends JFrame {
        PanneaumaGrille.setBounds(0,0,1285,675);
        panneauGeneral.add(PanneaumaGrille);
        this.setVisible(true);
+       
+
 	}
+
 	public class controleClavier implements KeyListener{
-	
-
-
-
 		public void keyPressed(KeyEvent e) {
 		
 		
