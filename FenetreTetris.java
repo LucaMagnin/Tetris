@@ -135,7 +135,6 @@ public class FenetreTetris extends JFrame {
        panneauGeneral.add(PanneaumaGrille);
        this.setVisible(true);
        
-
 	}
 
 	public class controleClavier implements KeyListener{
