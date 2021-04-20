@@ -1,3 +1,4 @@
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -25,6 +26,7 @@ public class Interfacedepart extends JFrame{
 	private JButton Quitter;
 	public FenetreTetris f;
 	private Font policeTetris;
+	private Audio monson;
 	
 	public Interfacedepart(){
 		
@@ -37,7 +39,8 @@ public class Interfacedepart extends JFrame{
 		this.setResizable(false);
 		// Pour permettre la fermeture de la fenÃªtre lors de l'appui sur la croix rouge
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		monson = new Audio();
+		monson.start();
 		
 	// mon panneau gÃ©nÃ©ral
 	
