@@ -52,7 +52,7 @@ public class chrono {
 		tempsDepart=System.currentTimeMillis();
 		/* Ajout des composants aux conteneurs avec formatage */
 		//label1.setBounds(20,20, 200, 40);
-		label1.setBorder(new EmptyBorder (10,20,10,10)); // permet d'aiter d'afficher 0 entre chaque seconde 
+		label1.setBorder(new EmptyBorder (10,20,10,10)); // permet d'eviter d'afficher 0 entre chaque secondes 
 		panel1.add(label1);  
 		
 	}
