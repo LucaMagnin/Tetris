@@ -6,11 +6,11 @@ import java.awt.event.*;
 
 public class chrono {
 	private int heure=0,minute=0,seconde=0;
-	private int heureFin=0, minuteFin=0,secondeFin=0;
+	//private int heureFin=0, minuteFin=0,secondeFin=0;
 	private JPanel panel1;
 	private JLabel label1;
-	private JLabel labelFin;
-	private long tempsFin=0;
+	//private JLabel labelFin;
+	//private long tempsFin=0;
 	private long tempsDepart=0;
 	/* Le timer */
 		int delais=1000;
@@ -20,11 +20,11 @@ public class chrono {
 		
 
 		/* crÃƒÂ©ation des composants */
-		label1 = new JLabel(heure+":"+minute+":"+seconde); /* dÃƒÂ©clarer final car une classe interne va acceder Ãƒ  ce composant */
+		label1 = new JLabel(heure+":"+minute+":"+seconde); /* déclarer final car une classe interne va acceder Ãƒ  ce composant */
 		panel1 = new JPanel(); //changer ÃƒÂ§a en JPanel
 		
 	}
-		/* Action rÃƒÂ©alisÃƒÂ© par le timer */
+		/* Action réalisé par le timer */
 	public void start()
 	{
 		tache_timer= new ActionListener()
@@ -52,8 +52,8 @@ public class chrono {
 		tempsDepart=System.currentTimeMillis();
 		/* Ajout des composants aux conteneurs avec formatage */
 		//label1.setBounds(20,20, 200, 40);
-		label1.setBorder(new EmptyBorder (10,20,10,10));
-		panel1.add(label1);  //, "Center"
+		label1.setBorder(new EmptyBorder (10,20,10,10)); // permet d'aiter d'afficher 0 entre chaque seconde 
+		panel1.add(label1);  
 		
 	}
 	public JPanel getPanel(){
