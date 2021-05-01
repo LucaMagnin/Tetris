@@ -7,6 +7,6 @@ public class EcouteurRegles implements ActionListener{
 		}
 	
 		public void actionPerformed(ActionEvent e)  {
-			b =new Regle();
+			Regle b =new Regle();
 		}
 	}
