@@ -6,11 +6,8 @@ import java.awt.event.*;
 
 public class chrono {
 	private int heure=0,minute=0,seconde=0;
-	//private int heureFin=0, minuteFin=0,secondeFin=0;
 	private JPanel panel1;
 	private JLabel label1;
-	//private JLabel labelFin;
-	//private long tempsFin=0;
 	private long tempsDepart=0;
 	/* Le timer */
 		int delais=1000;
@@ -20,8 +17,8 @@ public class chrono {
 		
 
 		/* crÃƒÂ©ation des composants */
-		label1 = new JLabel(heure+":"+minute+":"+seconde); /* déclarer final car une classe interne va acceder Ãƒ  ce composant */
-		panel1 = new JPanel(); //changer ÃƒÂ§a en JPanel
+		label1 = new JLabel(heure+":"+minute+":"+seconde); 
+		panel1 = new JPanel(); 
 		
 	}
 		/* Action réalisé par le timer */
@@ -59,36 +56,5 @@ public class chrono {
 	public JPanel getPanel(){
 		return panel1;
 	}
-	
-	/*public void stop(){
-		tempsFin=System.currentTimeMillis()-tempsDepart;
-		heureFin=(int) (tempsFin/3600000);
-			if (heureFin!=0){
-				tempsFin=tempsFin-heureFin*3600000;
-			}else{
-				heureFin=0;
-			}
-		minuteFin=(int) (tempsFin/600000);
-		
-			if (minuteFin!=0){
-				tempsFin=tempsFin-minuteFin*60000;
-			}else{
-				minuteFin=0;
-			}
-		secondeFin=(int) (tempsFin/1000);
-		
-		
-		heure=0;
-		minute=0;
-		seconde=0;
-		
-	} 
-	public long getTemps(){
-		return tempsFin;
-	}
-	
-	public JLabel getTempsFin(){
-		labelFin = new JLabel("" +heureFin+":"+minuteFin+":"+secondeFin);
-		return labelFin;
-	}*/
+
 }
