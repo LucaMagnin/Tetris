@@ -15,18 +15,15 @@ import javax.sound.sampled.*;
 
 
 
-
 public class FenetreTetris extends JFrame { 
 	//attributs
 	public Interfacedepart interfaceDep;
 	public GrilleC PanneaumaGrille;
 	public Sound monson;
-	private JButton boutonDescendre; // a changer avec clavier apres 
-    private JButton boutonTourner;
-    private JLabel tetraminosnext1;
-    private JLabel tetraminosnext2;
-    private JLabel level;
-    private JLabel score;
+   	private JLabel tetraminosnext1;
+    	private JLabel tetraminosnext2;
+    	private JLabel level;
+    	private JLabel score;
 	private JLabel linestoclear;
 	private chrono c=new chrono();  // chronometre 
 	private ActionListener tache_timer;
