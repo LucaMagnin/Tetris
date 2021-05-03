@@ -1,0 +1,1 @@
+/** * Methode main permettant de lancer le programme du jeu **/public class Tetris {	public static void main (String[] args) {		new Interfacedepart();	}	}

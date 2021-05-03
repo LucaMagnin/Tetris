@@ -1,3 +1,0 @@
-# Tetris
-
-c la merd

@@ -1,1 +1,0 @@
-import java.awt.event.*;public class EcouteurQuitter implements ActionListener {		private Interfacedepart intDep;		public EcouteurQuitter(Interfacedepart intDep) {		this.intDep=intDep;	}		public void actionPerformed(ActionEvent e) {		intDep.fermeFen();	} }

@@ -13,7 +13,9 @@ import javax.swing.JTextField;
 import  java.io.*;
 import javax.sound.sampled.*;
 
-
+/**
+ * Classe de l'interface graphique du jeu
+ * */
 
 public class FenetreTetris extends JFrame { 
 	//attributs
@@ -21,9 +23,9 @@ public class FenetreTetris extends JFrame {
 	public GrilleC PanneaumaGrille;
 	public Sound monson;
    	private JLabel tetraminosnext1;
-    	private JLabel tetraminosnext2;
-    	private JLabel level;
-    	private JLabel score;
+	private JLabel tetraminosnext2;
+	private JLabel level;
+	private JLabel score;
 	private JLabel linestoclear;
 	private chrono c=new chrono();  // chronometre 
 	private ActionListener tache_timer;
@@ -42,7 +44,7 @@ public class FenetreTetris extends JFrame {
 		this.setResizable(false);
 		// Pour permettre la fermeture de la fenetre lors de l'appui sur la croix rouge
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		monson = new Sound("Tetris Theme [Electro Swing Remix] Rhythm Play Along.wav");
+		monson = new Sound("./Ressources/Tetris Theme [Electro Swing Remix] Rhythm Play Along.wav");
 		monson.loop();
 		
 		// chronometre
@@ -126,7 +128,7 @@ public class FenetreTetris extends JFrame {
              
         
         //panneau fond
-		JLabel Fond1 = new JLabel(new ImageIcon("./Tetris-blockst.png"));
+		JLabel Fond1 = new JLabel(new ImageIcon("./Ressources/Tetris-blockst.png"));
 		Fond1.setBounds(-10,0,1300,650);
 		panneauGeneral.add(Fond1);	
 	
@@ -156,23 +158,26 @@ public class FenetreTetris extends JFrame {
 		Timer timer1= new Timer(1000,tache_timer);
 		timer1.start();	
 	}
+	
+	/**
+	 * Classe interne permettant le controle au clavier des tetraminos
+	 * */
 
 	public class controleClavier implements KeyListener {
 		public void keyPressed(KeyEvent e) {
 				switch (e.getKeyCode()) {
-					case KeyEvent.VK_UP:
-						break;
-					case KeyEvent.VK_DOWN:
+					case KeyEvent.VK_DOWN:										//Fleche vers le bas ==> Le tetramino descend plus vite
 						PanneaumaGrille.monControleGrille.Descendre();
+						PanneaumaGrille.monControleGrille.score+=10;
 						break;
 					case KeyEvent.VK_LEFT:
-						PanneaumaGrille.monControleGrille.DeplacementAGauche();
+						PanneaumaGrille.monControleGrille.DeplacementAGauche();	//Fleche a gauche ==> Le tetramino effectue un deplacement a gauche
 						break;
 					case KeyEvent.VK_RIGHT:
-						PanneaumaGrille.monControleGrille.DeplacementADroite();
+						PanneaumaGrille.monControleGrille.DeplacementADroite();	//Fleche a droite ==> Le tetramino effectue un deplacement a droite
 						break;
 					case KeyEvent.VK_SPACE:
-						PanneaumaGrille.monControleGrille.Rotation();
+						PanneaumaGrille.monControleGrille.Rotation();			//Touche espace ==> Le tetramino pivote sur lui même
 						break;
 				} 
 		}
